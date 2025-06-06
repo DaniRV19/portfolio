@@ -15,3 +15,51 @@
 .animate-fade-in-up {
   animation: fade-in-up 1s ease-out;
 }
+
+
+
+
+
+  #progressBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #7ed957, #5aa935);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #progressBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  #progressBtn svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #progressBtn circle {
+    fill: none;
+    stroke: #d1f5c9;
+    stroke-width: 8;
+  }
+
+  #progressArc {
+    fill: none;
+    stroke: white;
+    stroke-width: 8;
+    stroke-linecap: round;
+  }
+
+  #progressBtn polyline {
+    pointer-events: none;
+  }

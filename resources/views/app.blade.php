@@ -28,6 +28,13 @@
     
     <main class="flex-grow">
         @yield('content')
+        <div id="progressBtn" onclick="scrollToTop()" aria-label="Subir al inicio">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" />
+                <path id="progressArc" />
+                <polyline points="35,55 50,35 65,55" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
     </main>
 
     
@@ -98,6 +105,53 @@
         ScrollReveal().reveal('#habilidades h3', { delay: 200 });
         ScrollReveal().reveal('#habilidades .grid > div', { delay: 300, interval: 75 });
     </script>
+
+
+
+
+
+<script>
+  const progressArc = document.getElementById('progressArc');
+  const radius = 45;
+  const circumference = 2 * Math.PI * radius;
+
+  function setProgress(percent) {
+    const offset = circumference - (percent / 100) * circumference;
+    const start = 0;
+    const end = percent * 3.6;
+    const r = radius;
+    const x = 50 + r * Math.cos((start - 90) * Math.PI / 180);
+    const y = 50 + r * Math.sin((start - 90) * Math.PI / 180);
+
+    const xEnd = 50 + r * Math.cos((end - 90) * Math.PI / 180);
+    const yEnd = 50 + r * Math.sin((end - 90) * Math.PI / 180);
+
+    const largeArcFlag = percent > 50 ? 1 : 0;
+
+    progressArc.setAttribute("d", `
+      M ${x} ${y}
+      A ${r} ${r} 0 ${largeArcFlag} 1 ${xEnd} ${yEnd}
+    `);
+  }
+
+  function updateScrollProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    setProgress(scrollPercent);
+  }
+
+  function scrollToTop() {
+    document.getElementById("navbar")
+      ? document.getElementById("navbar").scrollIntoView({ behavior: "smooth" })
+      : window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  window.addEventListener("scroll", updateScrollProgress);
+  window.addEventListener("load", updateScrollProgress);
+</script>
+
+
 
 
 </body>
