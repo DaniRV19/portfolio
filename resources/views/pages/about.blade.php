@@ -38,18 +38,26 @@
         <div class="relative border-l-4 border-[#8bc34a] ml-4 space-y-10">
 
             <div class="ml-6">
+                <h4 class="text-xl font-bold">Máster en COBOL HOST + CAJAMAR</h4>
+                <span class="text-sm text-gray-500">ViewNext · 2025</span>
+                <p class="text-gray-700 mt-2">Formación especializada en programación COBOL para entornos bancarios con integración en sistemas de Cajamar.</p>
+            </div>
+
+            <div class="ml-6">
                 <h4 class="text-xl font-bold">Grado Superior en Desarrollo de Aplicaciones Web</h4>
                 <span class="text-sm text-gray-500">Ilerna Sevilla · 2023 - 2025</span>
                 <p class="text-gray-700 mt-2">Formación técnica especializada en Laravel, Vue, MySQL, PHP, y JavaScript.</p>
             </div>
 
             <div class="ml-6">
-                <h4 class="text-xl font-bold">Cofundador de OC Modus</h4>
-                <span class="text-sm text-gray-500">2024 - Actualidad</span>
-                <p class="text-gray-700 mt-2">Empresa de productos veganos donde desarrollo estrategias digitales y branding.</p>
+                <h4 class="text-xl font-bold">Bachillerato de Ciencias Tecnológicas</h4>
+                <span class="text-sm text-gray-500">I.E.S Ramón del Valle Inclán (Sevilla) · 2021 - 2023</span>
+                <p class="text-gray-700 mt-2">Enfoque en matemáticas, física y tecnología, desarrollando bases sólidas para el ámbito del desarrollo.</p>
             </div>
+
         </div>
     </div>
+
 
     <!-- Soft Skills -->
     <section id="softskills" class="py-20 text-center">
