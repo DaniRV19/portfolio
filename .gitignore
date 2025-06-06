@@ -1,0 +1,38 @@
+# Laravel
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+.env.backup
+.env.local
+.env.*.php
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+
+# Laravel Mix
+/public/hot
+/public/mix-manifest.json
+
+# IDEs y editores
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# PHPUnit
+coverage.xml
+.phpunit.cache
+
+# Composer
+composer.lock
+composer.phar
+
+# Vite
+/.vite
